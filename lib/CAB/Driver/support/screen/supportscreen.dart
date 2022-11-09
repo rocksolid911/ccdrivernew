@@ -1,4 +1,4 @@
-import 'package:ccdriver/Driver/support/screen/otherqueriy.dart';
+import 'package:ccdriver/CAB/Driver/support/screen/otherqueriy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_expanded_tile/flutter_expanded_tile.dart';
 import 'package:lottie/lottie.dart';

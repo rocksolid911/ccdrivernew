@@ -1,5 +1,5 @@
-import 'package:ccdriver/Driver/payment/screens/cashoutscreen.dart';
-import 'package:ccdriver/Driver/payment/widgets/graph.dart';
+import 'package:ccdriver/CAB/Driver/payment/screens/cashoutscreen.dart';
+import 'package:ccdriver/CAB/Driver/payment/widgets/graph.dart';
 import 'package:flutter/material.dart';
 
 class PaymentScreen extends StatefulWidget {

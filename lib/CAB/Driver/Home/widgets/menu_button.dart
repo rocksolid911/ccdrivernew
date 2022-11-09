@@ -1,5 +1,5 @@
-import 'package:ccdriver/Driver/Myride/screens/myridescreen.dart';
-import 'package:ccdriver/Driver/support/screen/supportscreen.dart';
+import 'package:ccdriver/CAB/Driver/Myride/screens/myridescreen.dart';
+import 'package:ccdriver/CAB/Driver/support/screen/supportscreen.dart';
 import 'package:ccdriver/common/aboutus.dart';
 import 'package:ccdriver/common/messages.dart';
 import 'package:flutter/material.dart';

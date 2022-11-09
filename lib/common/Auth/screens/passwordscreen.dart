@@ -1,6 +1,7 @@
-import 'package:ccdriver/Driver/Home/screen/DriverHome.dart';
 import 'package:ccdriver/common/Auth/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../../CAB/Driver/Home/screen/DriverHome.dart';
 
 class PassWordScreen extends StatefulWidget {
   const PassWordScreen({Key? key}) : super(key: key);

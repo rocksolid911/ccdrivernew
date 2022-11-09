@@ -1,8 +1,8 @@
-import 'package:ccdriver/Driver/profile/screens/Documents.dart';
-import 'package:ccdriver/Driver/profile/screens/adddetails.dart';
-import 'package:ccdriver/Driver/profile/screens/appsettings.dart';
-import 'package:ccdriver/Driver/profile/screens/editdoc.dart';
-import 'package:ccdriver/Driver/profile/screens/securityservice.dart';
+import 'package:ccdriver/CAB/Driver/profile/screens/Documents.dart';
+import 'package:ccdriver/CAB/Driver/profile/screens/adddetails.dart';
+import 'package:ccdriver/CAB/Driver/profile/screens/appsettings.dart';
+import 'package:ccdriver/CAB/Driver/profile/screens/editdoc.dart';
+import 'package:ccdriver/CAB/Driver/profile/screens/securityservice.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
 

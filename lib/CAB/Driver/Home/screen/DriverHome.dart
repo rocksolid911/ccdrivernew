@@ -1,5 +1,5 @@
-import 'package:ccdriver/Driver/notification/screen/notificationscreen.dart';
-import 'package:ccdriver/Driver/profile/screens/profilescreen.dart';
+import 'package:ccdriver/CAB/Driver/notification/screen/notificationscreen.dart';
+import 'package:ccdriver/CAB/Driver/profile/screens/profilescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
