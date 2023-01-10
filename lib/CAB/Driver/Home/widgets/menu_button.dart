@@ -3,7 +3,10 @@ import 'package:ccdriver/CAB/Driver/support/screen/supportscreen.dart';
 import 'package:ccdriver/common/aboutus.dart';
 import 'package:ccdriver/common/messages.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../../common/Auth/screens/loginscreen.dart';
 import '../../payment/screens/newuserpayment.dart';
 
 class MenuButton extends StatelessWidget {
@@ -21,11 +24,11 @@ class MenuButton extends StatelessWidget {
           backgroundColor: Colors.transparent,
           builder: (context) => Container(
             height: MediaQuery.of(context).size.height * 0.75,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(25.0),
-                topRight: const Radius.circular(25.0),
+                topLeft: Radius.circular(25.0),
+                topRight: Radius.circular(25.0),
               ),
             ),
             child: Container(
@@ -37,81 +40,161 @@ class MenuButton extends StatelessWidget {
                   Container(
                       margin: EdgeInsets.only(
                           left: MediaQuery.of(context).size.height * 0.02),
-                      child: Text("Menu",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.grey),)),
-                  Container(color: Color(0xFFEEEEEE),height: 30,),
+                      child: const Text(
+                        "Menu",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.grey),
+                      )),
+                  Container(
+                    color: const Color(0xFFEEEEEE),
+                    height: 30,
+                  ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>MyRide(),
+                          builder: (context) => const MyRide(),
                         ),
                       );
                     },
                     child: Container(
                         margin: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.height * 0.02,15,0,0),
-                        child: Text("My Ride",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
+                            MediaQuery.of(context).size.height * 0.02,
+                            15,
+                            0,
+                            0),
+                        child: const Text(
+                          "My Ride",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )),
                   ),
-                  Divider(),
+                  const Divider(),
                   Container(
                       margin: EdgeInsets.fromLTRB(
-                          MediaQuery.of(context).size.height * 0.02,15,0,0),
-                      child: Text("My Reward",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
-                  Divider(),
+                          MediaQuery.of(context).size.height * 0.02, 15, 0, 0),
+                      child: const Text(
+                        "My Reward",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      )),
+                  const Divider(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Message()));
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Message()));
                     },
                     child: Container(
                         margin: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.height * 0.02,15,0,0),
-                        child: Text("Message",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
+                            MediaQuery.of(context).size.height * 0.02,
+                            15,
+                            0,
+                            0),
+                        child: const Text(
+                          "Message",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )),
                   ),
-                  Divider(),
+                  const Divider(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>NewUpayment()));
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const NewUpayment()));
                     },
                     child: Container(
                         margin: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.height * 0.02,15,0,0),
-                        child: Text("Payment",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
+                            MediaQuery.of(context).size.height * 0.02,
+                            15,
+                            0,
+                            0),
+                        child: const Text(
+                          "Payment",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )),
                   ),
-                  Divider(),
+                  const Divider(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SupportHelp()));
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SupportHelp()));
                     },
                     child: Container(
                         margin: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.height * 0.02,15,0,0),
-                        child: Text("Support & Help",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
+                            MediaQuery.of(context).size.height * 0.02,
+                            15,
+                            0,
+                            0),
+                        child: const Text(
+                          "Support & Help",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )),
                   ),
-                  Divider(),
+                  const Divider(),
                   Container(
                       margin: EdgeInsets.fromLTRB(
-                          MediaQuery.of(context).size.height * 0.02,15,0,0),
-                      child: Text("Rating",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
-                  Divider(),
+                          MediaQuery.of(context).size.height * 0.02, 15, 0, 0),
+                      child: const Text(
+                        "Rating",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      )),
+                  const Divider(),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.pop(context);
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutUs()));
-
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AboutUs()));
                     },
                     child: Container(
                         margin: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.height * 0.02,15,0,0),
-                        child: Text("About Us",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),)),
+                            MediaQuery.of(context).size.height * 0.02,
+                            15,
+                            0,
+                            0),
+                        child: const Text(
+                          "About Us",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )),
                   ),
-                  Divider(),
+                  const Divider(),
+                  GestureDetector(
+                    onTap: () async {
+                      SharedPreferences pref =
+                          await SharedPreferences.getInstance();
+
+                      pref.clear();
+                      Get.offAll(() => const LogIn());
+                    },
+                    child: Container(
+                        margin: EdgeInsets.fromLTRB(
+                            MediaQuery.of(context).size.height * 0.02,
+                            15,
+                            0,
+                            0),
+                        child: const Text(  
+                          "Log Out",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )),
+                  ),
                 ],
               ),
             ),
@@ -121,8 +204,7 @@ class MenuButton extends StatelessWidget {
       child: CircleAvatar(
         backgroundColor: Colors.white,
         radius: MediaQuery.of(context).size.width * 0.06,
-        child: const Icon(Icons.widgets,
-            color: Colors.black),
+        child: const Icon(Icons.widgets, color: Colors.black),
       ),
     );
   }
