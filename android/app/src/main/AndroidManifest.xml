@@ -18,6 +18,8 @@
            />
 
        <receiver android:name="rekab.app.background_locator.BootBroadcastReceiver"
+                  android:exported="true"
+
            android:enabled="true">
            <intent-filter>
                <action android:name="android.intent.action.BOOT_COMPLETED"/>

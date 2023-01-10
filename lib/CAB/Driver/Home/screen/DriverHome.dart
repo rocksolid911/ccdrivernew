@@ -908,7 +908,7 @@ class _DriverHomeState extends State<DriverHome> {
                     ),
                     SizedBox(
                       width: 320.0,
-                      child: RaisedButton(
+                      child: ElevatedButton(
                         onPressed: () {
                           setState(() {
                             isAcceptRide = true;
@@ -920,7 +920,7 @@ class _DriverHomeState extends State<DriverHome> {
                           "Accept Ride",
                           style: TextStyle(color: Colors.white),
                         ),
-                        color: Theme.of(context).colorScheme.primary,
+                        // : Theme.of(context).colorScheme.primary,
                       ),
                     )
                   ],

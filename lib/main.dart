@@ -1,5 +1,6 @@
 import 'package:ccdriver/common/splashscreen.dart';
 import 'package:flutter/material.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -46,12 +47,9 @@ class MyApp extends StatelessWidget {
           color: Color(0xFFCCCCCC),
         ),
         subtitle2: TextStyle(
-          color: Color(0xFFCCCCCC
-      ),
-    ),
+          color: Color(0xFFCCCCCC),
+        ),
       ),
     );
   }
 }
-
-
